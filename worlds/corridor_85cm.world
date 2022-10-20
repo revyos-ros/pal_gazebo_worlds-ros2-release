@@ -1,5 +1,7 @@
 <sdf version='1.6'>
   <world name='default'>
+    <plugin name="pal_gazebo_collisions" filename="libpal_gazebo_collisions.so"/>
+    <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so"/>
     <physics name='default_physics' default='0' type='ode'>
       <ode>
         <solver>
@@ -105,20 +107,20 @@
         </link>
       </model>
       <model name='wall_1_model'>
-        <pose frame=''>7 0.45 1 0 -0 0</pose>
+        <pose frame=''>7 0.525 1 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='wall_1_body'>
-          <pose frame=''>7 0.45 1 0 -0 0</pose>
+          <pose frame=''>7 0.525 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='wall_2_model'>
-        <pose frame=''>7 -0.45 1 0 -0 0</pose>
+        <pose frame=''>7 -0.525 1 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='wall_2_body'>
-          <pose frame=''>7 -0.45 1 0 -0 0</pose>
+          <pose frame=''>7 -0.525 1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
