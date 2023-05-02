@@ -2,6 +2,14 @@
 Changelog for package pal_gazebo_worlds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.0 (2023-04-28)
+------------------
+
+3.0.4 (2023-04-28)
+------------------
+* Set gazebo publish rate
+* Contributors: Noel Jimenez
+
 3.0.3 (2022-10-20)
 ------------------
 * Merge branch 'cleanup' into 'humble-devel'
