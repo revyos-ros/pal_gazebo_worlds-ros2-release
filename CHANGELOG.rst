@@ -2,6 +2,16 @@
 Changelog for package pal_gazebo_worlds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.2 (2023-12-18)
+------------------
+* use OpaqueFunction to check world path
+* Contributors: antoniobrandi
+
+4.0.1 (2023-11-14)
+------------------
+* Add website tag
+* Contributors: Noel Jimenez
+
 4.0.0 (2023-04-28)
 ------------------
 
