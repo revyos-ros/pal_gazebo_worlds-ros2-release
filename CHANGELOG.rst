@@ -2,6 +2,11 @@
 Changelog for package pal_gazebo_worlds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.3 (2023-12-22)
+------------------
+* Update pal_gazebo.launch.py
+* Contributors: antoniobrandi
+
 4.0.2 (2023-12-18)
 ------------------
 * use OpaqueFunction to check world path
