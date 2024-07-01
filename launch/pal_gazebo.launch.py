@@ -46,11 +46,21 @@ def start_gzserver(context, *args, **kwargs):
     params_file = PathJoinSubstitution(
         substitutions=[pkg_path, 'config', 'gazebo_params.yaml'])
 
+    # Command to start the gazebo server.
+    gazebo_server_cmd_line = [
+        'gzserver', '-s', 'libgazebo_ros_init.so',
+        '-s', 'libgazebo_ros_factory.so', world,
+        '--ros-args', '--params-file', params_file]
+    # Start the server under the gdb framework.
+    debug = LaunchConfiguration('debug').perform(context)
+    if debug == 'True':
+        gazebo_server_cmd_line = (
+            ['xterm', '-e', 'gdb', '-ex', 'run', '--args'] +
+            gazebo_server_cmd_line
+        )
+
     start_gazebo_server_cmd = ExecuteProcess(
-        cmd=['gzserver', '-s', 'libgazebo_ros_init.so',
-             '-s', 'libgazebo_ros_factory.so', world,
-             '--ros-args', '--params-file', params_file],
-        output='screen')
+        cmd=gazebo_server_cmd_line, output='screen')
 
     return [start_gazebo_server_cmd]
 
@@ -80,6 +90,11 @@ def generate_launch_description():
         'world_name', default_value='',
         description="Specify world name, we'll convert to full path"
     )
+    declare_debug = DeclareLaunchArgument(
+        'debug', default_value='False',
+        choices=['True', 'False'],
+        description='If debug start the gazebo world into a gdb session in an xterm terminal'
+    )
 
     start_gazebo_server_cmd = OpaqueFunction(function=start_gzserver)
 
@@ -89,6 +104,7 @@ def generate_launch_description():
     # Create the launch description and populate
     ld = LaunchDescription()
 
+    ld.add_action(declare_debug)
     ld.add_action(declare_world_name)
 
     ld.add_action(SetEnvironmentVariable('GAZEBO_MODEL_PATH', model_path))
