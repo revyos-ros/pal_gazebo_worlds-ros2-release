@@ -2,6 +2,15 @@
 Changelog for package pal_gazebo_worlds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.0.4 (2024-07-01)
+------------------
+* Use single quotes
+* Fix typo
+* Use uppercase for debug argument choices
+* fit the previous argument declaration
+* Allow a "debug" argument to start the simu in a xterm+gdb session
+* Contributors: Maximilien Naveau, Noel Jimenez
+
 4.0.3 (2023-12-22)
 ------------------
 * Update pal_gazebo.launch.py
