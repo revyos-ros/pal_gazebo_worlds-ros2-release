@@ -1,3 +1,26 @@
+## pal_gazebo_worlds (humble) - 4.3.0-1
+
+The packages in the `pal_gazebo_worlds` repository were released into the `humble` distro by running `/home/z572/gits/revyos-ros/venv2/bin/bloom-release -r humble pal_gazebo_worlds --override-release-repository-push-url git@github.com:revyos-ros/pal_gazebo_worlds-ros2-release.git` on `Tue, 24 Sep 2024 02:58:46 -0000`
+
+The `pal_gazebo_worlds` package was released.
+
+Version of package(s) in repository `pal_gazebo_worlds`:
+
+- upstream repository: https://github.com/pal-robotics/pal_gazebo_worlds.git
+- release repository: https://github.com/revyos-ros/pal_gazebo_worlds-ros2-release.git
+- rosdistro version: `4.3.0-1`
+- old version: `4.0.4-1`
+- new version: `4.3.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## pal_gazebo_worlds (humble) - 4.0.4-1
 
 The packages in the `pal_gazebo_worlds` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble --track humble pal_gazebo_worlds` on `Mon, 01 Jul 2024 11:13:44 -0000`
